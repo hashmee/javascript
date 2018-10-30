@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learning Javascript</title>
+</head>
+<body>
+  <div id="header">
+    <h1>Learning Javascript</h1>
+    <p>With Mohammed Hashmi</p>
+  </div>
+</body>
+
+<script>
+  var number1 = 'Mohammed';
+  var number2 = 'Hashmi';
+
+  //javascript notations
+  // it starts with letters, numbers, underscores, dollarsign etc
+  // javscript is case sensitive
+
+  var test = 'this is a check for case sensitive';
+  var Test = 'this is a test of upper case';
+
+  // camelCase
+  var mohammedHashmi;
+  // PartialCase
+  var MohammedHashmi;
+  // under_score
+  var mohammed_hashmi;
+
+
+  //Arrays
+
+  // var colors1 = ['red', 'blue', 'green'];
+  // colors1[3] = 'purple';
+  // colors1.push('violet');
+
+  // var colors2 = new Array('red', 'blue', 'green');
+  // console.log(colors2.length);
+  // console.log(colors2.sort());
+
+  // var numbers = [22,45,89,1,5,6,7,89,114,0.23]
+  // console.log(numbers.sort());
+  // console.log(numbers.reverse());
+
+
+  // Loops
+  // for(var i=0; i<=10 ; i++){
+  //   console.log(i)
+  // }
+
+  // while loop
+
+  // var i = 0;
+  // while(i<=10){
+  //   console.log(i);
+  //   i++;
+  // }
+
+  // for each loop
+  // var sample_array = ['amjad','abdul qadeer',3,4,"samir bin zela",6,7,'mohammed hashmi', 'shaik muther pasha'];
+  // sample_array.forEach(function(element){
+  //   console.log(element);
+  // })
+
+
+  // conditionals
+
+  // true && true = true
+  // true && false = false
+  // false && true = false
+  // false && false = false
+
+
+  // true || true = true
+  // false || true = true
+  // true || false = true
+  // false || false = false
+
+
+  // if(1 == 1 || "muther" == "abdul qadeer"){
+  //   console.log('this is a true case')
+  // }else{
+  //   console.log('this is a false scenario')
+  // }
+
+  // var fruit = "grapes"
+
+  // switch(fruit){
+  //   case "apple":
+  //     alert("apples are red in color");
+  //     break;
+  //   case "banana":
+  //     alert('banana is yellow fruit');
+  //     break;
+  //   case "orange":
+  //     alert('orange juice is good for health');
+  //     break;
+  //   default:
+  //     alert('I like all types of fruits especially Indian ones');
+  //     break;
+  // }
+
+  // Objects
+
+  // object literal
+  // {key: value, key: value, key: value}
+  // var person = {
+  //   firstName: 'Mohammed',
+  //   lastName: "Hashmi",
+  //   age: 27,
+  //   parents: ['ammi', 'abba'],
+  //   fullName: function(){
+  //     return this.firstName + ' ' + this.lastName;
+  //   }
+  // }
+  
+  // console.log(person.fullName());
+
+  // object constructor
+
+  // var apple = new Object();
+  // apple.color = 'red';
+  // apple.shape = 'round';
+  // apple.describe = function() {
+  //   return 'Apples are ' + this.color + ' '+ 'in color and ' + this.shape+ ' in shape'
+  // }
+
+  // console.log(apple.describe());
+
+  // function Fruit(name, shape, color){
+  //    this.name = name;
+  //    this.shape = shape;
+  //    this.color = color;
+  //    this.describe = function(){
+  //     return this.name + ' are ' + this.color + ' '+ 'in color and ' + this.shape+ ' in shape'
+  //    }
+  // }
+
+  // var melon = new Fruit('melon', 'round', 'green');
+  // console.log(melon.describe());
+
+  var users = [
+    {name: "shaik muther pasha",age: 25},
+    {name: "abdul qadeer", age: 25},
+    {name: "amjad", age: 24},
+    {name: "hashmi mohammed", age: 27}
+  ]
+  
+  console.log(users[users.length - 1].name)
+  
+</script>
+
+</html>
