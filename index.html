@@ -8,14 +8,27 @@
 </head>
 <body>
   <div id="header">
-    <h1>Learning Javascript</h1>
+      <button onmouseover="showDate()" onmouseout="clearDate()">click me</button>
+    <h1 id="heading">Learning Javascript</h1>
     <p>With Mohammed Hashmi</p>
   </div>
 </body>
 
 <script>
-  var number1 = 'Mohammed';
-  var number2 = 'Hashmi';
+
+  function showDate(){
+    var heading = document.getElementById('heading');
+    return heading.innerHTML = Date();
+  }
+
+  function clearDate(){
+    var heading = document.getElementById('heading');
+    return heading.innerHTML = 'Learning Javascript';
+  }
+  
+  var firstName = 'Mohammed';
+
+  var lastName = 'Hashmi';
 
   //javascript notations
   // it starts with letters, numbers, underscores, dollarsign etc
@@ -34,37 +47,38 @@
 
   //Arrays
 
-  // var colors1 = ['red', 'blue', 'green'];
-  // colors1[3] = 'purple';
-  // colors1.push('violet');
+  var colors1 = ['red', 'blue', 'green'];
+  colors1[3] = 'purple';
+  colors1.push('violet');
 
-  // var colors2 = new Array('red', 'blue', 'green');
-  // console.log(colors2.length);
-  // console.log(colors2.sort());
+  var colors2 = new Array('red', 'blue', 'green');
+  console.log(colors2.length);
+  console.log(colors2.sort());
 
-  // var numbers = [22,45,89,1,5,6,7,89,114,0.23]
-  // console.log(numbers.sort());
-  // console.log(numbers.reverse());
+  var numbers = [22,45,89,1,5,6,7,89,114,0.23]
+  console.log(numbers.sort());
+  console.log(numbers.reverse());
 
 
   // Loops
-  // for(var i=0; i<=10 ; i++){
-  //   console.log(i)
-  // }
+  // i++ or i = i + 1
+  for(var i=0; i <= 10 ; i++) {
+    console.log(i);
+  }
 
   // while loop
 
-  // var i = 0;
-  // while(i<=10){
-  //   console.log(i);
-  //   i++;
-  // }
+  var i = 0;
+  while(i<=10){
+    console.log(i);
+    i++;
+  }
 
   // for each loop
-  // var sample_array = ['amjad','abdul qadeer',3,4,"samir bin zela",6,7,'mohammed hashmi', 'shaik muther pasha'];
-  // sample_array.forEach(function(element){
-  //   console.log(element);
-  // })
+  var sample_array = ['amjad','abdul qadeer',3,4,"samir bin zela",6,7,'mohammed hashmi', 'shaik muther pasha'];
+  sample_array.forEach(function(element){
+    console.log(element);
+  })
 
 
   // conditionals
@@ -81,67 +95,76 @@
   // false || false = false
 
 
-  // if(1 == 1 || "muther" == "abdul qadeer"){
-  //   console.log('this is a true case')
-  // }else{
-  //   console.log('this is a false scenario')
-  // }
+  if(1 == 1 || "muther" == "abdul qadeer"){
+    console.log('this is a true case')
+  }else{
+    console.log('this is a false scenario')
+  }
 
-  // var fruit = "grapes"
 
-  // switch(fruit){
-  //   case "apple":
-  //     alert("apples are red in color");
-  //     break;
-  //   case "banana":
-  //     alert('banana is yellow fruit');
-  //     break;
-  //   case "orange":
-  //     alert('orange juice is good for health');
-  //     break;
-  //   default:
-  //     alert('I like all types of fruits especially Indian ones');
-  //     break;
-  // }
+  if(!(1 == 2)){
+  console.log('one will never equates with two');
+  }else{
+    console.log('this is a falsy block')
+  }
+
+
+  var fruit = "hashmi"
+
+  switch(fruit){
+    case "apple":
+      alert("apples are red in color");
+      break;
+    case "banana":
+      alert('banana is yellow fruit');
+      break;
+    case "orange":
+      alert('orange juice is good for health');
+      break;
+    default:
+      console.log('I like all types of fruits especially Indian ones');
+      break;
+  }
 
   // Objects
 
   // object literal
   // {key: value, key: value, key: value}
-  // var person = {
-  //   firstName: 'Mohammed',
-  //   lastName: "Hashmi",
-  //   age: 27,
-  //   parents: ['ammi', 'abba'],
-  //   fullName: function(){
-  //     return this.firstName + ' ' + this.lastName;
-  //   }
-  // }
+  var person = {
+    firstName: 'Mohammed',
+    lastName: "Hashmi",
+    age: 27,
+    parents: ['ammi', 'abba'],
+    fullName: function(){
+      return this.firstName + ' ' + this.lastName;
+    }
+  }
   
-  // console.log(person.fullName());
+  console.log(person.fullName());
 
   // object constructor
 
-  // var apple = new Object();
-  // apple.color = 'red';
-  // apple.shape = 'round';
-  // apple.describe = function() {
-  //   return 'Apples are ' + this.color + ' '+ 'in color and ' + this.shape+ ' in shape'
-  // }
+  var apple = new Object();
+  apple.color = 'red';
+  apple.shape = 'round';
+  apple.describe = function() {
+    return 'Apples are ' + this.color + ' '+ 'in color and ' + this.shape+ ' in shape'
+  }
 
-  // console.log(apple.describe());
+  console.log(apple.describe());
 
-  // function Fruit(name, shape, color){
-  //    this.name = name;
-  //    this.shape = shape;
-  //    this.color = color;
-  //    this.describe = function(){
-  //     return this.name + ' are ' + this.color + ' '+ 'in color and ' + this.shape+ ' in shape'
-  //    }
-  // }
+  function Fruit(name, shape, color){
+     this.name = name;
+     this.shape = shape;
+     this.color = color;
+     this.describe = function(){
+      return this.name + ' are ' + this.color + ' '+ 'in color and ' + this.shape+ ' in shape'
+     }
+  }
 
-  // var melon = new Fruit('melon', 'round', 'green');
-  // console.log(melon.describe());
+  var melon = new Fruit('melon', 'round', 'green');
+  var mango = new Fruit('mango', 'oval', 'yellow or green');
+  console.log(mango.describe());
 
   var users = [
     {name: "shaik muther pasha",age: 25},
